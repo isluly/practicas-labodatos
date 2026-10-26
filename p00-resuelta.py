@@ -166,21 +166,11 @@ incorporada de manera versátil. Sugerimos utilizar los parámetros:
 pago_extra_monto, pago_extra_mes_comienzo, pago_extra_mes_fin.
 
 """
-def pagoDavid():
-    tasa_mensual = 0.05 / 12
-    falta_devolver = 500000
-    cuota = 2684.11
-    pago_total = 0
-
-    while falta_devolver > 0:
-        falta_devolver *= 1 + tasa_mensual
-        pago = min(cuota, falta_devolver)
-        falta_devolver -= pago
-        pago_total += pago
-
-    return pago_total
-
-def pagoDavid_con_adelanto(pago_extra_monto=0, pago_extra_mes_comienzo=0, pago_extra_mes_fin=0):
+def pagoDavid_con_adelanto(
+    pago_extra_monto=0,
+    pago_extra_mes_comienzo=0,
+    pago_extra_mes_fin=0
+):
     tasa_mensual = 0.05 / 12
     falta_devolver = 500000
     cuota = 2684.11
@@ -189,12 +179,11 @@ def pagoDavid_con_adelanto(pago_extra_monto=0, pago_extra_mes_comienzo=0, pago_e
 
     while falta_devolver > 0:
         falta_devolver *= 1 + tasa_mensual
-        pago = min(cuota, falta_devolver)
-        
-        # Verificar si estamos en el rango de pagos extra
+        pago = cuota
+
         if pago_extra_mes_comienzo <= mes <= pago_extra_mes_fin:
             pago += pago_extra_monto
-        
+
         falta_devolver -= pago
         pago_total += pago
         mes += 1
