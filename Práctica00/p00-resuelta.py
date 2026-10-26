@@ -174,7 +174,7 @@ def pagoDavid_con_adelanto(
     tasa_mensual = 0.05 / 12
     falta_devolver = 500000
     cuota = 2684.11
-    pago_total = 0
+    pago_total = 0 
     mes = 1
 
     while falta_devolver > 0:
