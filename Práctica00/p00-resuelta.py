@@ -1,3 +1,4 @@
+
 """
 PRACTICA 00 - INTRODUCCIÓN A PYTHON
 
@@ -6,10 +7,6 @@ FECHA: 2° cuatrimestre 2026
 ESTADO: Resuelta
 
 """
-
-#%% imports
-
-import pandas as pd
 
 #%% Ejercicio 1
 
