@@ -1,7 +1,7 @@
 """
 TAREA DE PROCESAMIENTO DE DATOS
 Fecha realizada: 27-10-2026
-Estado: En proceso
+Estado: Terminada
 
 """
 #%% Imports
